@@ -2,4 +2,10 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse('Django CRM')
+    context = {}
+    
+    return render(
+        request,
+        'pages/home.html',
+        context=context
+    )
